@@ -103,21 +103,21 @@ label =
             \break
 
             \label "C"
-            cis'4~\mf cis'8 gis cis' dis'~ dis' e'~        e' gis cis' dis'~ dis' e' dis' cis'
+            cis'4~ cis'8\mf gis cis' dis'~ dis' e'~        e' gis cis' dis'~ dis' e' dis' cis'
             r4 r8 a cis' dis'~ dis' e'~                 e' a~ a gis'~ gis' fis' e'~ e'
             fis'4~ fis'8 a cis' dis'~ dis' e'~          e' a~ a cis'~ cis' dis' e'4
-            e'4~ e'8 e' dis' cis'~ cis' bis~            bis4~ bis8 cis'~ cis' dis'~ dis'4
+            e'4~ e'8 dis' cis' dis'~ dis' cis'~         cis' bis~ bis cis'~ cis' dis'~ dis'4
 
             \break
             r4 r8 gis cis' dis'~ dis' e'~               e' gis cis' dis'~ dis' e' dis' cis'
             r4 r8 a cis' dis'~ dis' e'~                 e' a~ a gis'~ gis' fis' e'~ e'
             fis'4~ fis'8 a cis' dis'~ dis' e'~          e' a~ a cis'~ cis' dis' e'4
-            e'4~ e'8 e' dis' cis'~ cis' bis~            bis4~ bis8 cis'~ cis' dis'~ dis'4
+            e'4~ e'8 dis' cis' dis'~ dis' cis'~         cis' bis~ bis cis'~ cis' dis'~ dis'4
 
             \break
-            r4 r8 a cis' dis'~ dis' e'~                 e' a cis' dis'~ dis' e' dis' cis'
+            r4\mp r8 a cis' dis'~ dis' e'~                 e' a cis' dis'~ dis' e' dis' cis'
             r4 r8 a cis' dis'~ dis' e'~                 e' a~ a a'~ a' gis' fis'4
-            gis'4~ gis'8 gis' gis' fis'~ fis' e'~       e'4~ e'8 gis'8~ gis'8 fis' e'4
+            gis'4~ gis'8 gis' gis' fis'~ fis' e'~       e'2 gis'8 fis' e'4
             fis'4~ fis'8 fis' fis' e'~ e' dis'~         dis'4 ~ dis'8 fisis~ fisis gis~ gis4
 
             \break
@@ -139,7 +139,7 @@ label =
             \break
 
             \transpose cis gis {
-                r4 r8 a cis' dis'~ dis' e'~                 e'4~ e'8 e'~ e' dis' cis'4
+                r4\mp r8 a cis' dis'~ dis' e'~                 e'4~ e'8 e'~ e' dis' cis'4
                 dis'4~ dis'8 dis' dis' cis'~ cis' bis~      bis4~ bis8 cis'~ cis' dis'~ dis'4
                 \break
                 r4 r8 a cis' dis'~ dis' e'~                 e'4~ e'8 gis'~ gis' fis' e'4
@@ -147,7 +147,7 @@ label =
 
                 \break
 
-                r4\mp r8 gis cis' dis'~ dis' e'~               e'4~ e'8 a~ a e' dis'4
+                r4\mf r8 gis cis' dis'~ dis' e'~               e'4~ e'8 a~ a e' dis'4
                 cis'4~ cis'8 cis' dis' cis'~ cis' bis~      bis4~ bis8 cis'~ cis' dis'~ dis'4
                 \break
                 r4 r8 gis cis' dis'~ dis' e'~               e'4~ e'8 a~ a e' dis'4
@@ -215,7 +215,7 @@ label =
             fis,8 ( cis fis4~ fis2~         fis1 )
             gis,8 ( dis gis4~ gis2~         gis1 )
 
-            a,8 ( cis e4~ e2~               e1 )
+            a,8\mp ( cis e4~ e2~               e1 )
             fis,8 ( cis fis4~ fis2~         fis1 )
             e,8 ( b, e4~ e2~                e1 )
             dis,8 ( ais, dis4~ dis2 )       fis,8 ( cis fis4~ fis2 )
@@ -235,12 +235,12 @@ label =
             }
 
             \transpose cis gis {
-                a,8 ( cis e4~ e2 )              a,8 ( cis e4~ e2 )
+                a,8\mp ( cis e4~ e2 )              a,8 ( cis e4~ e2 )
                 gis,8 ( dis gis4~ gis 2 )       gis,8 ( dis gis4~ gis 2 )
                 a,8 ( cis e4~ e2 )              a,8 ( cis e4~ e2 )
                 fis,8 ( cis fis4~ fis2 )        gis,8 ( dis gis4~ gis 2 )
 
-                cis,8\mp ( gis, cis4~ cis2 )       a,8 ( cis e4~ e2 )
+                cis,8\mf ( gis, cis4~ cis2 )       a,8 ( cis e4~ e2 )
                 fis,8 ( cis fis4~ fis2 )        gis,8 ( dis gis4~ gis 2 )
                 cis,8 ( gis, cis4~ cis2 )       a,8 ( cis e4~ e2 )
                 fis,8 ( cis fis4~ fis2 )        gis,8 ( dis gis4~ gis 2 )
