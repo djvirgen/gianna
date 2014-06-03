@@ -56,7 +56,7 @@ label =
             \clef treble
             \key cis \minor
             \time 4/4
-            \tempo 4=130
+            \tempo 4=134
             \repeat volta 2 {
                 r4\mp r8 gis cis' dis'~ dis' e'~    e' gis cis' dis'~ dis' e'~ e'4
                 r4 r8 gis cis' dis'~ dis' e'~       e' gis~ gis fis'~ fis' e' dis'4
