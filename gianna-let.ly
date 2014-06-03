@@ -49,18 +49,21 @@ label =
 {
 
     \new PianoStaff <<
-        \new Staff = "up" {
+        \new Staff = "up" \with {
+            fontSize = #-1
+            \override StaffSymbol.staff-space = #(magstep -1)
+        } {
             \clef treble
             \key cis \minor
             \time 4/4
             \tempo 4=130
             \repeat volta 2 {
-                r4\mp r8 gis cis' dis'~ dis' e'~       e' gis cis' dis'~ dis' e'~ e'4
+                r4\mp r8 gis cis' dis'~ dis' e'~    e' gis cis' dis'~ dis' e'~ e'4
                 r4 r8 gis cis' dis'~ dis' e'~       e' gis~ gis fis'~ fis' e' dis'4
                 cis'4~ cis'8 a cis' dis'~ dis' e'~ e' a cis' dis'~ dis' e' dis' cis'
             }
             \alternative {
-                { r4 r8 a cis' dis'~ dis' e'~ e' a~ a gis'~ gis' fis' e'4 \break }
+                { r4 r8 a cis' dis'~ dis' e'~ e' a~ a gis'~ gis' fis' e'4 }
                 { r4 r8 a cis' dis'~ dis' e'~ e'4~ e'8 bis~ bis gis' fis'4 }
             }
 
@@ -68,8 +71,6 @@ label =
             r4 r8 a cis' dis'~ dis' e'~ e' a~ a a'~ a' gis' fis'~ fis'
             gis'4~ gis'8 a' gis' fis'~ fis' gis'8~ gis'4~ gis'8 a' gis'4 fis'
             gis' fis' e'8 fis'~ fis' e'~ e' dis'~ dis' cis'~ cis' dis'~ dis'4
-
-            \break
 
             \label "A"
             \repeat volta 2 {
@@ -79,43 +80,41 @@ label =
                 dis'4~ dis'8 dis' dis' cis'~ cis' bis~      bis4~ bis8 cis'~ cis' dis'~ dis'4
             }
 
-            \break
-
             r4 r8 a cis' dis'~ dis' e'~                 e'4~ e'8 e'~ e' dis' cis'4
             dis'4~ dis'8 dis' dis' cis'~ cis' bis~      bis4~ bis8 cis'~ cis' dis'~ dis'4
-            r4 r8 a cis' dis'~ dis' e'~                 e'4~ e'8 gis'~ gis' fis' e'4
-            fis'4~\decresc fis'8 fis' fis' gis'~ gis' a'~       a'4~ a'8 bis~ bis cis'~ cis'4\!
+            r4 r8 a cis' dis'~ dis' e'~                 e'4~ e'8 e'~ e' dis' cis'4
+            dis'4~ dis'8 dis' dis' cis'~ cis' bis~      bis4~ bis8 gis'~ gis' fis' e'4
+
+            fis'4~ fis'8 a cis' dis'~ dis' e'~          e'4~ e'8 e'~ e' dis' cis'4
+            dis'4~ dis'8 dis' dis' cis'~ cis' bis~      bis4~ bis8 dis'~ dis' cis' bis4
+            cis'4~\cresc cis'8 a cis' dis'~ dis' e'~    e'4~ e'8 a~ a e' dis'4
+            cis'4~ cis'8 cis' dis' cis'~ cis' bis~      bis4~ bis8 dis'~ dis' cis' bis4\!
 
             \break
 
             \label "B"
-            r4\f r8 gis cis' dis'~ dis' e'~               e'4~ e'8 a~ a e' dis'4
+            cis'4~\f cis'8 gis cis' dis'~ dis' e'~        e'4~ e'8 a~ a e' dis'4
             cis'4~ cis'8 cis' dis' cis'~ cis' bis~      bis4~ bis8 cis'~ cis' dis'~ dis'4
             r4 r8 gis cis' dis'~ dis' e'~               e'4~ e'8 a~ a e' dis'4
             cis'4~ cis'8 cis' dis' cis'~ cis' bis~      bis4~ bis8 cis'~ cis' dis'~ dis'4
-
-            \break
 
             r4 r8 gis cis' dis'~ dis' e'~               e'4~ e'8 a~ a gis' fis' e'
             fis'4~ fis'8 fis' fis' gis'~ gis' a'~       a'4~ a'8 bis~ bis cis'~ cis'4
             r4 r8 gis cis' dis'~ dis' e'~               e'4~ e'8 a~ a e' dis'4
             cis'4~ cis'8 cis' dis' cis'~ cis' bis~      bis4~ bis8 dis'~ dis' cis' bis4
-            \break
 
             \label "C"
-            cis'4~ cis'8\mf gis cis' dis'~ dis' e'~        e' gis cis' dis'~ dis' e' dis' cis'
+            cis'4~ cis'8\mf gis cis' dis'~ dis' e'~     e' gis cis' dis'~ dis' e' dis' cis'
             r4 r8 a cis' dis'~ dis' e'~                 e' a~ a gis'~ gis' fis' e'~ e'
             fis'4~ fis'8 a cis' dis'~ dis' e'~          e' a~ a cis'~ cis' dis' e'4
             e'4~ e'8 dis' cis' dis'~ dis' cis'~         cis' bis~ bis cis'~ cis' dis'~ dis'4
 
-            \break
             r4 r8 gis cis' dis'~ dis' e'~               e' gis cis' dis'~ dis' e' dis' cis'
             r4 r8 a cis' dis'~ dis' e'~                 e' a~ a gis'~ gis' fis' e'~ e'
             fis'4~ fis'8 a cis' dis'~ dis' e'~          e' a~ a cis'~ cis' dis' e'4
             e'4~ e'8 dis' cis' dis'~ dis' cis'~         cis' bis~ bis cis'~ cis' dis'~ dis'4
 
-            \break
-            r4\mp r8 a cis' dis'~ dis' e'~                 e' a cis' dis'~ dis' e' dis' cis'
+            r4\mp r8 a cis' dis'~ dis' e'~              e' a cis' dis'~ dis' e' dis' cis'
             r4 r8 a cis' dis'~ dis' e'~                 e' a~ a a'~ a' gis' fis'4
             gis'4~ gis'8 gis' gis' fis'~ fis' e'~       e'2 gis'8 fis' e'4
             fis'4~ fis'8 fis' fis' e'~ e' dis'~         dis'4 ~ dis'8 fisis~ fisis gis~ gis4
@@ -125,49 +124,50 @@ label =
 
             \repeat volta 2 {
                 \label "D"
-                r4\f r8 dis' gis' ais'~ ais' b'~              b'4~ b'8 dis'~ dis' cis'' b'4
+                r4\f r8 dis' gis' ais'~ ais' b'~            b'4~ b'8 dis'~ dis' cis'' b'4
                 ais'4~ ais'8 ais' ais' gis'~ gis' ais'~     ais'4~ ais'8 cis'~ cis' b' ais'4
                 gis'4~ gis'8 gis' ais' gis'~ gis' e'~       e'4~ e'8 b'~ b' ais' gis'4
                 ais'4~ ais'8 ais' ais' gis'~ gis' fisis'~   fisis'4~ fisis'8 gis'~ gis' ais'~ ais'4
-                \break
+
                 r4 r8 dis' gis' ais'~ ais' b'~              b'4~ b'8 dis'~ dis' cis'' b'4
                 ais'4~ ais'8 ais' ais' gis'~ gis' ais'~     ais'4~ ais'8 cis'~ cis' b' ais'4
                 gis'4~ gis'8 gis' ais' gis'~ gis' e'~       e'4~ e'8 dis''~ dis'' cis'' b'4
                 cis''4~ cis''8 cis'' cis'' b'~ b' ais'~     ais'4~ ais'8 fisis'~ fisis' gis'~ gis'4
             }
 
-            \break
-
             \transpose cis gis {
-                r4\mp r8 a cis' dis'~ dis' e'~                 e'4~ e'8 e'~ e' dis' cis'4
+                r4 r8 a cis' dis'~ dis' e'~                 e'4~ e'8 e'~ e' dis' cis'4
                 dis'4~ dis'8 dis' dis' cis'~ cis' bis~      bis4~ bis8 cis'~ cis' dis'~ dis'4
-                \break
-                r4 r8 a cis' dis'~ dis' e'~                 e'4~ e'8 gis'~ gis' fis' e'4
-                fis'4~ fis'8 fis' fis' gis'~ gis' a'~       a'4~ a'8 bis~ bis cis'~ cis'4
+                r4 r8 a cis' dis'~ dis' e'~                 e'4~ e'8 e'~ e' dis' cis'4
+                dis'4~ dis'8 dis' dis' cis'~ cis' bis~      bis4~ bis8 gis'~ gis' fis' e'4
 
-                \break
+                fis'4~ fis'8 a cis' dis'~ dis' e'~          e'4~ e'8 e'~ e' dis' cis'4
+                dis'4~ dis'8 dis' dis' cis'~ cis' bis~      bis4~ bis8 dis'~ dis' cis' bis4
+                cis'4~\cresc cis'8 a cis' dis'~ dis' e'~    e'4~ e'8 a~ a e' dis'4
+                cis'4~ cis'8 cis' dis' cis'~ cis' bis~      bis4~ bis8 dis'~ dis' cis' bis4\!
 
-                r4\mf r8 gis cis' dis'~ dis' e'~               e'4~ e'8 a~ a e' dis'4
+                cis'4~\mf cis'8 gis cis' dis'~ dis' e'~     e'4~ e'8 a~ a e' dis'4
                 cis'4~ cis'8 cis' dis' cis'~ cis' bis~      bis4~ bis8 cis'~ cis' dis'~ dis'4
-                \break
                 r4 r8 gis cis' dis'~ dis' e'~               e'4~ e'8 a~ a e' dis'4
                 cis'4~ cis'8 cis' dis' cis'~ cis' bis~      bis4~ bis8 cis'~ cis' dis'~ dis'4
-                \break
                 r4 r8 gis cis' dis'~ dis' e'~               e'4~ e'8 a~ a gis' fis' e'
                 fis'4~ fis'8 fis' fis' gis'~ gis' a'~       a'4~ a'8 bis~ bis cis'~ cis'4
-                \break
                 r4 r8 gis cis' dis'~ dis' e'~               e'4~ e'8 a~ a e' dis'4
                 cis'4~\decresc cis'8 cis' dis' cis'~ cis' bis~      bis4~ bis8 dis'~ dis' cis' bis4
 
                 cis'1\fermata\!
+
+                \bar "|."
             }
         }
 
-        \new Staff ="down" {
+        \new Staff ="down" \with {
+            fontSize = #-1
+            \override StaffSymbol.staff-space = #(magstep -1)
+        } {
             \clef bass
             \key cis \minor
             \time 4/4
-            %\set Staff.pedalSustainStyle = #'mixed
             \repeat volta 2 {
                 cis,8\mp ( gis, cis4~ cis2~         cis1 )
                 cis,8 ( gis, cis4~ cis2~            cis1 )
@@ -193,7 +193,12 @@ label =
             a,8 ( cis e4~ e2 )              a,8 ( cis e4~ e2 )
             gis,8 ( dis gis4~ gis 2 )       gis,8 ( dis gis4~ gis 2 )
             a,8 ( cis e4~ e2 )              a,8 ( cis e4~ e2 )
-            fis,8 ( cis fis4~ fis2 )        gis,8 ( dis gis4~ gis 2 )
+            gis,8 ( dis gis4~ gis 2 )       gis,8 ( dis gis4~ gis 2 )
+
+            a,8 ( cis e4~ e2 )              a,8 ( cis e4~ e2 )
+            gis,8 ( dis gis4~ gis 2 )       gis,8 ( dis gis4~ gis 2 )
+            fis,8 ( cis fis4~ fis2 )        fis,8 ( cis fis4~ fis2 )
+            gis,8 ( dis gis4~ gis 2 )       gis,8 ( dis gis4~ gis 2 )
 
             cis,8\f ( gis, cis4~ cis2 )     a,8 ( cis e4~ e2 )
             fis,8 ( cis fis4~ fis2 )        gis,8 ( dis gis4~ gis 2 )
@@ -235,10 +240,14 @@ label =
             }
 
             \transpose cis gis {
-                a,8\mp ( cis e4~ e2 )              a,8 ( cis e4~ e2 )
+                a,8\mp ( cis e4~ e2 )           a,8 ( cis e4~ e2 )
                 gis,8 ( dis gis4~ gis 2 )       gis,8 ( dis gis4~ gis 2 )
                 a,8 ( cis e4~ e2 )              a,8 ( cis e4~ e2 )
-                fis,8 ( cis fis4~ fis2 )        gis,8 ( dis gis4~ gis 2 )
+                gis,8 ( dis gis4~ gis 2 )       gis,8 ( dis gis4~ gis 2 )
+                a,8 ( cis e4~ e2 )              a,8 ( cis e4~ e2 )
+                gis,8 ( dis gis4~ gis 2 )       gis,8 ( dis gis4~ gis 2 )
+                fis,8 ( cis fis4~ fis2 )        fis,8 ( cis fis4~ fis2 )
+                gis,8 ( dis gis4~ gis 2 )       gis,8 ( dis gis4~ gis 2 )
 
                 cis,8\mf ( gis, cis4~ cis2 )       a,8 ( cis e4~ e2 )
                 fis,8 ( cis fis4~ fis2 )        gis,8 ( dis gis4~ gis 2 )
@@ -263,6 +272,6 @@ label =
     }
 
     \midi {
-        \tempo 4 = 130
+        \tempo 4 = 134
     }
 }
